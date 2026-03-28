@@ -17,6 +17,26 @@ public class fourinarow {
         System.out.println("Let's start the game!");
         // Here you can implement the game logic for Four in a Row.
     }
+
+    public class FourInARow {
+    private char[][] board;
+    private char currentPlayer;
+    private boolean gameOver;
+    public FourInARow() {
+        board = new char[6][7]; // 6 rows and 7 columns
+        currentPlayer = 'X'; // Player 1 starts with 'X'
+        gameOver = false;
+        initializeBoard();
+    }
+    
+    private void initializeBoard() {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                board[i][j] = ' ';
+            }
+        }
+    }
+    
   // goal: Create a simple console-based Four in a Row game where two players can take turns dropping their pieces into a grid. The first player to connect four of their pieces in a row (horizontally, vertically, or diagonally) wins the game. Implement input handling for player moves and display the game board after each turn. the second player is AI that makes random valid moves. The game should continue until one player wins or the board is full, resulting in a draw. Include error handling for invalid inputs and ensure the game runs smoothly in the console.
 
 }
